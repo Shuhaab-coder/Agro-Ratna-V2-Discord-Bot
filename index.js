@@ -123,7 +123,7 @@ This comprehensive system enhances agricultural productivity, reduces manual lab
     "@V2 --v" ||
     "@V2 What Are The Features?" ||
     "@V2 Who Is Agro Ratna V2?" ||
-    message.mentions.users.has(client.user.id) && !message.author.bot
+    `<@!${client.user.id}>`
   ) {
     message.reply("Not A Command Please Use `@V2 !help`");
   }
