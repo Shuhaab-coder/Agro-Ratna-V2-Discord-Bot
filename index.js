@@ -106,6 +106,23 @@ This comprehensive system enhances agricultural productivity, reduces manual lab
     message.reply(`Available Commands are: @V2 Who Is Agro Ratna V2?, @V2 !ping, @V2 !Synopsis, @V2 Tell Me About The V1, @V2 --v, @V2 What Are The Features? & @V2 Who Is Agro Ratna V2?. There are 7 Total Commands.
       `);
   }
+  if (message.mentions.users.has(client.user.id) && !message.author.bot) {
+    message.reply(
+      "Hello, I'm Agro Ratna V2's Discord Bot. to know my commands please use `@V2 !help`"
+    );
+  }
+  if (
+    message.content !== "@V2 !help" ||
+    "@V2 ho Is Agro Ratna V2?" ||
+    "@V2 !ping" ||
+    "@V2 !Synopsis" ||
+    " @V2 Tell Me About The V1" ||
+    "@V2 --v" ||
+    "@V2 What Are The Features?" ||
+    "@V2 Who Is Agro Ratna V2?"
+  ) {
+    message.reply("Not A Command Please Use `@V2 !help`");
+  }
 });
 
 client.login(process.env.TOKEN);
