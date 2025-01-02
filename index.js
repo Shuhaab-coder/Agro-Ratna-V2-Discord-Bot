@@ -114,22 +114,6 @@ This comprehensive system enhances agricultural productivity, reduces manual lab
       "Hello, I'm Agro Ratna V2's Discord Bot. to know my commands please use `@V2 !help`"
     );
   }
-if (
-    message.content.startsWith("@V2 ") &&
-    !(
-      message.content === "@V2 !help" ||
-      "@V2 Who Is Agro Ratna V2?" ||
-      "@V2 !ping" ||
-      "@V2 !Synopsis" ||
-      " @V2 Tell Me About The V1" ||
-      "@V2 --v" ||
-      "@V2 What Are The Features?" ||
-      "@V2 Who Is Agro Ratna V2?" ||
-      (message.mentions.users.has(client.user.id) && !message.author.bot)
-    )
-  ) {
-    message.reply("Not A Command Please Use `@V2 !help`");
-  }
 });
 
 client.login(process.env.TOKEN);
