@@ -1,4 +1,7 @@
 const { Client, GatewayIntentBits, Events } = require("discord.js");
+const express = require('express');
+const keepAliveApp = require('./keep_alive.js'); // Requires the keep_alive app
+const axios = require('axios'); // Required for API requests
 require("dotenv").config();
 
 const client = new Client({
@@ -119,7 +122,8 @@ This comprehensive system enhances agricultural productivity, reduces manual lab
     " @V2 Tell Me About The V1" ||
     "@V2 --v" ||
     "@V2 What Are The Features?" ||
-    "@V2 Who Is Agro Ratna V2?"
+    "@V2 Who Is Agro Ratna V2?" ||
+    message.mentions.users.has(client.user.id) && !message.author.bot
   ) {
     message.reply("Not A Command Please Use `@V2 !help`");
   }
